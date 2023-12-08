@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Calculator</title>
+</head>
+<style type="text/css">
+	body{
+		background-image: url(Pictures/calc.jpg);
+		background-position: center;
+  		background-repeat: no-repeat;
+ 		background-size: cover;
+	}
+	input{
+		width: 115px;
+		height: 40px;
+		margin: 5px;
+		float: left;
+		background-color: #DEC8C8;
+		border: none;
+		border-radius: 2pxb;
+		font-size: 20px;
+	}
+	div{
+		height: 310px;
+		width: 500px;
+		padding: 15px;
+		margin: auto;
+		border: 2px groove white;
+		border-radius: 5px;
+		background-color: #EFE5E5;
+	}
+	h1{
+		padding: 10px;
+		width: 300px;
+		text-align: center;
+		margin: 20px auto;
+		background-color: #DAC4C4;
+	}
+	.Display{
+		height: 40px; 
+		width: 482px; 
+		border: 4px groove white; 
+		background-color:#F9F5F5; 
+		text-align: right;
+	}
+	@media screen and (max-width: 1242px){
+		div{
+		height: 450;
+		width: 90%;
+		margin: auto;
+		padding: 10px;
+		background-color: none;
+		border: none;
+	}
+		input{
+		margin: 2px;
+		float: left;
+		width: 23%;
+	}
+	.Display{
+		width: 92%; 
+		border: 4px groove white; 
+		background-color:#F9F5F5; 
+		text-align: right;
+		margin: auto;
+	}
+	body{
+		background-size: cover;
+	}
+	}
+</style>
+<body>
+	<h1>CALCULATOR</h1>
+	<div>
+	<form>
+		<input type="text" name="display" class="Display"><br>
+		<input type="button" value="DE" onclick="display.value = display.value.toString().slice(0,-1)" style="background-color: #B07E7E;" >
+		<input type="button" value="%" onclick="display.value +='%'" style="background-color:#CEAEAE;">
+		<input type="button" value="&#247" onclick="display.value +='/'" style="background-color:#CEAEAE;">
+		<input type="button" value="&times" onclick="display.value +='*'" style="background-color:#CEAEAE;">
+		<input type="button" value="1" onclick="display.value +='1'">
+		<input type="button" value="2" onclick="display.value +='2'">
+		<input type="button" value="3" onclick="display.value +='3'">
+		<input type="button" value="+" onclick="display.value +='+'" style="background-color:#CEAEAE;">
+		<input type="button" value="4" onclick="display.value +='4'">
+		<input type="button" value="5" onclick="display.value +='5'">
+		<input type="button" value="6" onclick="display.value +='6'">
+		<input type="button" value="-" onclick="display.value +='-'" style="background-color:#CEAEAE;">
+		<input type="button" value="7" onclick="display.value +='7'">
+		<input type="button" value="8" onclick="display.value +='8'">
+		<input type="button" value="9" onclick="display.value +='9'">
+		<input type="button" value="." onclick="display.value +='.'" style="background-color:#CEAEAE;">
+		<input type="button" value="(" onclick="display.value +='('" style="background-color:#CEAEAE;">
+		<input type="button" value="0" onclick="display.value +='0'">
+		<input type="button" value=")" onclick="display.value +=')'" style="background-color:#CEAEAE;">
+		<input type="button" value="=" onclick="display.value=eval(display.value)" class="equal" style="background-color: #B07E7E;">
+	</form>
+	</div>
+
+</body>
+</html>
